@@ -1,0 +1,12 @@
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.formBtn {
+  width: 100px;
+  font-weight: 700;
+  font-size: 10px;
+  margin-top: 10px;
+  padding: 5px;
+}
