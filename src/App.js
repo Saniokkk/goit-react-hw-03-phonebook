@@ -12,10 +12,16 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.setState({ contacts: getFromStorage('contacts') });
+    console.log('DidMount');
+    this.setState(
+      getFromStorage('contacts')
+        ? { contacts: getFromStorage('contacts') }
+        : [],
+    );
   }
 
   componentDidUpdate() {
+    console.log('DidUpdate');
     addToStorage('contacts', this.state.contacts);
   }
 
@@ -51,9 +57,11 @@ class App extends Component {
   };
 
   contactsFilter = () => {
-    const { contacts, filters } = this.state;
+    console.log('FILTER');
+    const { contacts, filter } = this.state;
     return contacts.filter(({ name }) => {
-      return name.toLowerCase().includes(filters.toLowerCase().trim());
+      console.log(name);
+      return name.toLowerCase().includes(filter.toLowerCase().trim());
     });
   };
 

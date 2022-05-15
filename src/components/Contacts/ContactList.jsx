@@ -30,5 +30,5 @@ ContactList.propTypes = {
   value: PropTypes.string.isRequired,
   handleBtn: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  filterContacts: PropTypes.array.isRequired,
+  filterContacts: PropTypes.array,
 };
